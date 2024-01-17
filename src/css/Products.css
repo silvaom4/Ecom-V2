@@ -1,0 +1,140 @@
+
+h2 {
+    color: palevioletred;
+    text-align: center;
+    font-family:'Cormorant Garamond', serif;
+    padding: 50px 0 0 0;
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+section {
+    /* padding-top: 40px; */
+    padding-bottom: 80px;
+    height: 1050px;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    font-family:'Cormorant Garamond', serif;
+    
+}
+
+.product-grid a:hover {
+    border: lightcoral 3px solid;
+}
+
+.product-grid a {
+    text-decoration: none;
+    color: black;
+    border: lightgray 1px dotted;
+}
+
+.product-grid a:nth-child(1) {
+background: url(../../public/Images/Gucci-1.webp) no-repeat bottom;
+background-size: 325px;
+font-size: 18px;
+text-align: center;
+}
+
+.product-grid a:nth-child(2) {
+    background: url(../../public/Images/gucci-2.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+
+.product-grid a:nth-child(3) {
+    background: url(../../public/Images/gucci-3.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+
+    
+}
+
+
+.product-grid a:nth-child(4) {
+    background: url(../../public/Images/gucci-4.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.product-grid a:nth-child(5) {
+    background: url(../../public/Images/gucci-5.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.product-grid a:nth-child(6) {
+    background: url(../../public/Images/gucci-6.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.product-grid a:nth-child(7) {
+    background: url(../../public/Images/gucci-7.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.product-grid a:nth-child(8) {
+    background: url(../../public/Images/gucci-8.webp) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.product-grid a:nth-child(9) {
+    background: url(../../public/Images/gucci-9.avif) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.product-grid a:nth-child(10) {
+    background: url(../../public/Images/gucci-10.avif) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.product-grid a:nth-child(11) {
+    background: url(../../public/Images/gucci-11.avif) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.product-grid a:nth-child(12) {
+    background: url(../../public/Images/gucci-12.avif) no-repeat bottom;
+    background-size: 325px;
+    font-size: 18px;
+    text-align: center;
+    
+}
