@@ -4,6 +4,16 @@ body {
     /* background: #e89bc7; */
   }
   
+  /* .slider-div {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .new-arrivals {
+    text-align: center;
+    color: pink;
+  }
+  
   .slidershow {
     width: 700px;
     height: 400px;

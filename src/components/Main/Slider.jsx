@@ -2,8 +2,12 @@ import React from 'react'
 
 export default function Slider() {
   return (
-    <div>
-      <div className="slidershow middle">
+    <div className='slider-div'>
+
+    
+        
+      <div className="slidershow middle"> 
+       
   <div className="slides">
     <input type="radio" name="r" id="r1" defaultChecked="" />
     <input type="radio" name="r" id="r2" />

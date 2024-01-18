@@ -29,32 +29,32 @@ export default function Home() {
           <section className="hero-container">
             <div className="hero-image">
               <h2>Live with style</h2>
-              <p>G U C C I</p>
+              <p>G U C C I S S</p>
             </div>
           </section>
         </main>
 
-        <Slider />
+        <p className="new-new-arrive">New Arrivals</p>
 
-
+        <div>
+          <Slider />
+        </div>
 
         <article className="article-container">
-        <span className="article-grid">
-        <span></span>
-        <span className="join">Join the party.</span>
-        <span className="join-p">Don't miss out, check out our latest styles and stay in fashion.</span>
-        
-       
-        </span>
+          <span className="article-grid">
+            <span></span>
+            <span className="join">Join the party.</span>
+            <span className="join-p">
+              Don't miss out, check out our latest styles and stay in fashion.
+            </span>
+          </span>
         </article>
-    
+
         {/* <div className="article-container">
           <p>hello</p>
         </div> */}
 
-      <Footer />
-
-        
+        <Footer />
       </>
     </div>
   );

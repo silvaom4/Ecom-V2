@@ -54,7 +54,7 @@ useEffect(() => {
     <div>
         <Font />
       <Header />
-      <h1 className="products-h1">Products</h1>
+      <h2>Products</h2>
 
       <div className="buttons-container">
         {filters.map((category, idx) => (

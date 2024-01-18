@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .products-h1 {
@@ -16,6 +17,10 @@ h1, p {
     margin: 0;
     padding: 0;
 }
+/* .new-arrivals {
+    color: pink;
+    padding: 60px;
+} */
 
 .container {
     display: flex;
