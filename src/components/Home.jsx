@@ -29,7 +29,7 @@ export default function Home() {
           <section className="hero-container">
             <div className="hero-image">
               <h2>Live with style</h2>
-              <p>G U C C I S S</p>
+              <p>G U C C I</p>
             </div>
           </section>
         </main>
