@@ -34,6 +34,7 @@ h2 {
 label {
     padding: 5px 0;
     font-size: 23px;
+    text-align: left;
 
 }
 input {
@@ -121,8 +122,10 @@ small {
      .bar-lists a {
         font-size: 13px;
 
-        
+            
     }
+
+
 
 
 

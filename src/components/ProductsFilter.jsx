@@ -9,7 +9,7 @@ export default function ProductsFilter() {
   const [search, setSearch] = useState("");
 
   const [selectedFilters, setSelectedFilters] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([]);// all possible data 
+  const [filteredItems, setFilteredItems] = useState([]); // all possible data
 
   useEffect(() => {
     fetch("http://localhost:7075/productsData")
@@ -22,9 +22,9 @@ export default function ProductsFilter() {
   }, []);
   // ../../public/Images/Gucci-1.webp
 
-useEffect(() => {
+  useEffect(() => {
     filterItems();
-  }, [selectedFilters]);// filter items runs when selected filters state changes
+  }, [selectedFilters]); // filter items runs when selected filters state changes
 
   let filters = ["slides", "sandals", "bags", "winter"];
 
@@ -37,11 +37,10 @@ useEffect(() => {
     }
   };
 
-  
   const filterItems = () => {
     if (selectedFilters.length > 0) {
       let tempItems = selectedFilters.map((selectedCategory) => {
-        let temp = filteredItems.filter((item) => item.category === selectedCategory);
+        let temp = data.filter((item) => item.category === selectedCategory);
         return temp;
       });
       setFilteredItems(tempItems.flat());
@@ -50,11 +49,43 @@ useEffect(() => {
     }
   };
 
+  // const handleSearchClick = (e) => {
+  //   setSearch(e.target.value);
+    
+  //   const filteredData = data.filter((item) =>
+  //   item.name.toLowerCase().includes(search.toLowerCase())
+  // );
+  //   setFilteredItems(filteredData)
+   
+  // };
+
+  const handleSearchClick = (e) => {
+    const searchValue = e.target.value;
+    setSearch(searchValue);
+
+    let filteredData = [...data]
+
+    if (searchValue !== "") {
+      filteredData = filteredData.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()))
+    }
+  }
+  
+
   return (
     <div>
-        <Font />
+      <Font />
       <Header />
       <h2>Products</h2>
+      <container>
+        <form>
+          <input
+            type="search"
+            value={search}
+            onChange={handleSearchClick}
+            placeholder="Search here"
+          />
+        </form>
+      </container>
 
       <div className="buttons-container">
         {filters.map((category, idx) => (
@@ -71,21 +102,28 @@ useEffect(() => {
       </div>
 
       <div className="items-container">
-        {filteredItems.map((item, idx) => (
+        {filteredItems.filter((d) => {
+                return search.toLowerCase() === ""
+                  ? d
+                  : d.name.toLowerCase().includes(search);
+              }).map((item, idx) => (
           <div key={`data-${idx}`} className="item">
             <p>{item.name}</p>
             <p>${item.price}</p>
             <p className="category">{item.category}</p>
-            <img className="filter-image"
-                        src={require(`../../public/Images/${item.imgUrl}`)}
-                        alt={item.name}
-                      ></img>
+            <img
+              className="filter-image"
+              src={require(`../../public/Images/${item.imgUrl}`)}
+              alt={item.name}
+            ></img>
             <p>{item.description}</p>
           </div>
         ))}
       </div>
 
-      <container>
+      
+
+      {/* <container>
         <form>
           <input
             type="search"
@@ -124,7 +162,7 @@ useEffect(() => {
               ))}
           </tbody>
         </table>
-      </container>
+      </container> */}
     </div>
   );
 }
