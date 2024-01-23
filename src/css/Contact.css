@@ -87,11 +87,13 @@ small {
 .success small {
     color: green;
     visibility: visible;
+    text-align: left;
 }
 
 .error small {
     color: red;
     visibility: visible;
+    text-align: left;
 }
 
 @media screen and (max-width: 400px) {
